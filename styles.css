@@ -1,0 +1,109 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Roboto Condensed", serif;
+}
+
+#help {
+  position: relative;
+  top: -200px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.display {
+  transform: rotateX(10deg) rotateY(32deg) rotateZ(10.1deg) translate3d(69px, 30px, 0);
+  background-color: bisque;
+  width: 410px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 8px solid burlywood;
+  box-shadow: 14px -6px burlywood, 14px 2px burlywood, 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+}
+
+.screen {
+  background-color: aquamarine;
+  border: 1px solid black;
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.screen p {
+  font-size: 60px;
+  transform: rotateZ(0deg) translate3d(20px, -45px, 0);
+}
+
+.bottom-part {
+  background-color: bisque;
+  width: 400px;
+  height: 400px;
+  transform: rotateX(30deg) rotateZ(20deg);
+  border-radius: 0px 0px 32px 32px;
+  box-shadow: 2px 15px 0px 0px burlywood, 15px 8px 0px 0px burlywood, 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  width: 300px;
+  height: 300px;
+  margin-left: 16px;
+}
+
+.screen::after {
+  content: "";
+  position: fixed;
+  z-index: 20;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 15px;
+  background: bisque;
+}
+
+.screen::before {
+  content: "";
+  position: fixed;
+  z-index: 20;
+  top: -6px;
+  left: 5px;
+  width: 10px;
+  height: 15px;
+  background: burlywood;
+  transform: rotate(60deg);
+}
+
+.button {
+  pointer-events: auto;
+  backface-visibility: hidden;
+  border: 1px solid black;
+  position: relative;
+  z-index: 10;
+  background-color: #BAE1E8;
+  width: 70px;
+  height: 60px;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  transform-style: preserve-3d;
+  border-radius: 4px;
+  transition: 0.1s ease-out transform;
+}
+.button:active {
+  transform: translate3d(3px, 2px, 4px);
+}/*# sourceMappingURL=styles.css.map */
